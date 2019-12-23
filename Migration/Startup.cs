@@ -6,6 +6,8 @@ using Microsoft.Extensions.Hosting;
 using Migration.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Migration
 {
@@ -29,6 +31,9 @@ namespace Migration
             services.AddTransient<IContactService, ContactService>();
 
             services.AddSingleton<IMapper>(new Mapper(configuration));
+
+            services.AddSingleton<IDbConnection>(
+new SqlConnection("Database=C:\\USERS\\SUYASH.S\\SOURCE\\REPOS\\MIGRATION\\MIGRATION.DATA\\CONTACTSDB.MDF;Server=(localDB)\\MSSQLLocalDB;Integrated Security=True;"));
             
         }
 

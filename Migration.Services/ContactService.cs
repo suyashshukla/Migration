@@ -16,10 +16,10 @@ namespace Migration.Services
     {
         AutoMapper.IMapper mapper;
         Database database;
-        public ContactService(AutoMapper.IMapper mapper)
+        IDbConnection connection;
+        public ContactService(AutoMapper.IMapper mapper, IDbConnection connection)
         {
-            IDbConnection connection = new SqlConnection("Database=C:\\USERS\\SUYASH.S\\SOURCE\\REPOS\\MIGRATION\\MIGRATION.DATA\\CONTACTSDB.MDF;Server=(localDB)\\MSSQLLocalDB;" +
-                "Integrated Security=True;");
+            this.connection = connection;
 
             database = new Database(connection);
             this.mapper = mapper;
