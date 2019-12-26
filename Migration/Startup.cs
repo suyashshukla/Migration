@@ -32,8 +32,7 @@ namespace Migration
 
             services.AddSingleton<IMapper>(new Mapper(configuration));
 
-            services.AddSingleton<IDbConnection>(
-new SqlConnection("Database=C:\\USERS\\SUYASH.S\\SOURCE\\REPOS\\MIGRATION\\MIGRATION.DATA\\CONTACTSDB.MDF;Server=(localDB)\\MSSQLLocalDB;Integrated Security=True;"));
+            services.AddSingleton<IDbConnection>(new SqlConnection(DataHolder.connectionString));
             
         }
 

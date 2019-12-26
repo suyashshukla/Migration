@@ -5,7 +5,7 @@ namespace Migration.Core
     public class ContactDetails
     {
 
-        public int id
+        public int Id
         {
             get; set;
         }

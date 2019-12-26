@@ -1,7 +1,49 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css" />
+    <script src="~/Views/Home/Script.js"></script>
+</head>
+<div class="row container-fluid" id="options-pane">
+    <div class="card m-3 col-1 p-0 text-center">
+        <div class="card-header bg-dark text-white">
+            CREATE
+        </div>
+        <div class="card-body">
+
+            <button class="btn btn-default border border-black">EXECUTE</button>
+        </div>
+    </div>
+    <div class="card m-3 col-1 p-0 text-center">
+        <div class="card-header bg-dark text-white">
+            READ
+        </div>
+        <div class="card-body">
+            <button class="btn btn-default border border-black" onclick="getList()">EXECUTE</button>
+        </div>
+    </div>
+    <div class="card m-3 col-1 p-0 text-center">
+        <div class="card-header bg-dark text-white">
+            UPDATE
+        </div>
+        <div class="card-body">
+
+            <button class="btn btn-default border border-black">EXECUTE</button>
+        </div>
+    </div>
+    <div class="card m-3 col-1 p-0 text-center">
+        <div class="card-header bg-dark text-white">
+            DELETE
+        </div>
+        <div class="card-body">
+            <button class="btn btn-default border border-black">EXECUTE</button>
+        </div>
+    </div>
+</div>
+
+<div class="bg-light" id="content-pane">
+       
+</div>
 

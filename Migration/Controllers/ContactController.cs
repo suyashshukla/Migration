@@ -26,7 +26,6 @@ namespace Migration.Controllers
             return contactService.Get();
         }
 
-
         [HttpGet("{id}", Name = "Get")]
         public ContactDetails Get(int id)
         {
